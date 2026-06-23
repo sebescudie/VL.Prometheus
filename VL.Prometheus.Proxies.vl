@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="Ggs3tq0VKc5LYCgULtKZr3" LanguageVersion="2025.7.1-0178-g883a4e690a" Version="0.128">
+  <NugetDependency Id="BaAWGUbYFd8N87zZkF31LC" Location="VL.CoreLib" Version="2025.7.1-0178-g883a4e690a" />
+  <Patch Id="SzZJtWX2y41Nmi2ySVgvai">
+    <Canvas Id="NbEMJCWURyiMAk4FWh9O9G" DefaultCategory="Prometheus.Proxies" CanvasType="FullCategory">
+      <!--
+
+    ************************ HttpListenerException ************************
+
+-->
+      <Node Name="HttpListenerException" Bounds="842,301" Id="Q5GIvFDBWwMPaGSxeZ2pJZ">
+        <p:NodeReference>
+          <Choice Kind="ForwardDefinition" Name="Forward" />
+          <CategoryReference Kind="Category" Name="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="System.Net" LastDependency="System.Net.HttpListener.dll">
+          <Choice Kind="TypeFlag" Name="HttpListenerException" />
+          <FullNameCategoryReference ID="System.Net" />
+          <AssemblyReference ID="System.Net.HttpListener.dll" />
+        </p:TypeAnnotation>
+        <Patch Id="JR3YGR6Oz5jP2dNlthApJQ">
+          <Canvas Id="FHmCtCas0A8L7dVAf4S2Rp" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="LItSaY17DVwQWcA5aiDNxp" IsHidden="true" />
+        </Patch>
+      </Node>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="TqZrhW61AaINqDqNjLlAK4">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="KtkMVeB0nC9NtOA06A3kjV">
+        <Canvas Id="C18bR1h7tiCNdnBsZgd1ps" CanvasType="Group" />
+        <Patch Id="LEvotMwJ0UjNFIqXDbnz9k" Name="Create" />
+        <Patch Id="Msk88DEnx08NJxlxoSV4oh" Name="Update" />
+        <ProcessDefinition Id="J1vTiPfG7e4PCFbO7kSdXQ">
+          <Fragment Id="NPEBdxDi0HGO99C2Sfmpph" Patch="LEvotMwJ0UjNFIqXDbnz9k" Enabled="true" />
+          <Fragment Id="A5P0MrZIxW8LdNfx6DlVvG" Patch="Msk88DEnx08NJxlxoSV4oh" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <PlatformDependency Id="FXGs4Nin0RROCO0DUh0FNc" Location="System.Net.HttpListener" />
+</Document>
