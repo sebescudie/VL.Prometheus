@@ -13,3 +13,7 @@ Instrument your vvvv apps with Prometheus metrics. Based on [prometheus-net](htt
 ## What this plugin does
 
 This plugin creates a web-server that exposes your metrics in the [Prometheus format](https://prometheus.io/docs/concepts/data_model/) and allows you to easily expose new metrics (your patch framerate, or any arbitrary piece of data relevant to your application).
+
+## Credits
+
+Initial research of this library was sponsored by [Refik Anadol Studio](https://refikanadolstudio.com/).
