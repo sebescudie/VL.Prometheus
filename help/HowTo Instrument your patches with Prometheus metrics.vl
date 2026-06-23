@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="NUvJ8rEdtEiNqyk3lk4bFc" LanguageVersion="2025.7.2" Version="0.128">
+  <NugetDependency Id="A25PjmNS0PdPJcqPrAC6ON" Location="VL.CoreLib" Version="2025.7.2" />
+  <Patch Id="QaNZqDVfM2RMFpBI9xMkL1">
+    <Canvas Id="LNd7LClNAikMSbXDikYehF" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="VyTAWasXSTaN2WwJvz5j8M">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="GfRX3lcXEOqM0DgRXAZiXl">
+        <Canvas Id="HkFmCEpTLdgNK1XCFyM3m7" CanvasType="Group">
+          <Node Bounds="211,271,72,19" Id="SQMgnBDuyVNNYPWqObpetW">
+            <p:NodeReference LastCategoryFullName="Prometheus.Server" LastDependency="VL.Prometheus.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MetricServer" />
+            </p:NodeReference>
+            <Pin Id="TSLtyyLR1raLGTEX2mzXsi" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KYD9ZHYedWXQW7sGMoRMrs" Name="Port" Kind="InputPin" />
+            <Pin Id="PpVHla7QL3ZPI1JUfvwwZS" Name="Output" Kind="OutputPin" IsHidden="true" />
+          </Node>
+          <Pad Id="UtGSdgaAQdjQZLYTsWlveI" Comment="Name" Bounds="219,425,157,15" ShowValueBox="true" isIOBox="true" Value="application_framerate_fps">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Bks0QQURjQfLx3wahdvwq6" Comment="Help" Bounds="239,455,149,15" ShowValueBox="true" isIOBox="true" Value="Framerate of the patch">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="257,475,32,19" Id="V0sbYxdWRCHNWxGFpEUYZ1">
+            <p:NodeReference LastCategoryFullName="Animation" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="FPS" />
+            </p:NodeReference>
+            <Pin Id="OdhO4sIjUU1OAJNS2dgUWb" Name="Output" Kind="OutputPin" />
+            <Pin Id="E8DJXg8zYfEQBVvrVgRFsW" Name="Clock" Kind="InputPin" IsHidden="true" />
+          </Node>
+          <Overlay Id="KC4IxkIwmIBMvox3qEr4Xw" Name="1. Create your metric server" Bounds="177,213,361,104" />
+          <Overlay Id="OBOtjF7ZL8MQbr3VAtQK5g" Name="2. Create metrics" Bounds="177,361,361,187" />
+          <Pad Id="OTcSimpFOMANoD6fTTNsSj" Bounds="171,120,372,58" ShowValueBox="true" isIOBox="true" Value="How to instrument your patches with Prometheus metrics">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Overlay Id="OnmnXM0O4ooMtOM9GRMP9Y" Name="3. See metrics in your browser" Bounds="177,601,361,97" />
+          <Pad Id="MG8pdEt1ruXO5vZkX7148J" Bounds="206,656,206,19" ShowValueBox="true" isIOBox="true" Value="http://localhost:15000/metrics">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="217,510,45,19" Id="Eyr8m9YfzhZQZJmzDVqoUP">
+            <p:NodeReference LastCategoryFullName="Prometheus.Metrics" LastDependency="VL.Prometheus.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Gauge" />
+            </p:NodeReference>
+            <Pin Id="MLvRcLyTgVCONFj10mC82E" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Ci03X40CgFpODbDcUOwIX8" Name="Name" Kind="InputPin" />
+            <Pin Id="K9h73HnJNW2MteQrsbXa5K" Name="Help" Kind="InputPin" />
+            <Pin Id="JBSrbrgaW1EMFhKd86iEZ9" Name="Label Names" Kind="InputPin" IsHidden="true" />
+            <Pin Id="VW4OlnxjBcnOVDfWb8yY8p" Name="Value" Kind="InputPin" />
+            <Pin Id="AMWOn1qysmxM5Hbourkxyh" Name="Output" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="QkhKoXTdoVmMVJ3TcBpnFl" Name="Label Values" Kind="InputPin" IsHidden="true" />
+            <Pin Id="B3rGGm9j8xIQbJ5OQUzNty" Name="Gauge" Kind="OutputPin" IsHidden="true" />
+          </Node>
+        </Canvas>
+        <Patch Id="PnNDNDQIRtANQIH4pzkekC" Name="Create" />
+        <Patch Id="JxWZW8sia8pNnRKuUe4dT4" Name="Update" />
+        <ProcessDefinition Id="V3tvlmqrkFzNJTVhfpB97T">
+          <Fragment Id="UVc6eKqPq2iQIc8mFcR8kK" Patch="PnNDNDQIRtANQIH4pzkekC" Enabled="true" />
+          <Fragment Id="ULZSfmWCU4aLQA4lOvrGUK" Patch="JxWZW8sia8pNnRKuUe4dT4" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="VRyP78CfUdJOASWwE4ThVf" Ids="UtGSdgaAQdjQZLYTsWlveI,Ci03X40CgFpODbDcUOwIX8" />
+        <Link Id="KVbfyUDCqYyMEZYAiBrdPh" Ids="Bks0QQURjQfLx3wahdvwq6,K9h73HnJNW2MteQrsbXa5K" />
+        <Link Id="RYxIGrxWrM0Lq57rBCOC4z" Ids="OdhO4sIjUU1OAJNS2dgUWb,VW4OlnxjBcnOVDfWb8yY8p" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="BpiC8dErKsxMN6JRgjQdT5" Location="VL.Prometheus" Version="0.0.0" />
+</Document>
