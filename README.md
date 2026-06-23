@@ -1,6 +1,6 @@
 # VL.Prometheus
 
-Instrument your vvvv apps with Prometheus metrics
+Instrument your vvvv apps with Prometheus metrics. Based on [prometheus-net](https://github.com/prometheus-net/prometheus-net).
 
 <p align="center">
 <img src="img/logo.png" title="" alt="VL.Prometheus logo" width="256">
