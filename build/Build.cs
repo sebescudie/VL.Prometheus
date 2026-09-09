@@ -64,6 +64,7 @@ class Build : FalloutBuild
 
     Target Release => _ => _
     .DependsOn(Tag, Push)
+    .Requires(() => GitTasks.GitHasCleanWorkingCopy())
     .Executes(() =>
     {
         // Meta target, only calls Tag and Push, which themselves
