@@ -20,17 +20,18 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="MetricServer" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="TSLtyyLR1raLGTEX2mzXsi" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="KYD9ZHYedWXQW7sGMoRMrs" Name="Port" Kind="InputPin" />
             <Pin Id="PpVHla7QL3ZPI1JUfvwwZS" Name="Output" Kind="OutputPin" IsHidden="true" />
-            <Pin Id="DwdwUVqXNLhP1paoFPFVQz" Name="Static Labels" Kind="InputPin" IsHidden="true" />
+            <Pin Id="DwdwUVqXNLhP1paoFPFVQz" Name="Static Labels" Kind="InputPin" />
             <Pin Id="TMoSspU7WXUOIdu4XPbrfD" Name="Listen to DotNet Stats" Kind="InputPin" DefaultValue="False" />
             <Pin Id="Uq2FaPhw19EL5jIcJ4IgnP" Name="Listen to Meters" Kind="InputPin" DefaultValue="False" />
             <Pin Id="VFsbpdY4FR9OflFHusHiTW" Name="Listen to Event Counters" Kind="InputPin" IsHidden="true" />
             <Pin Id="MNKOnCxT0e2O3MsurDeEHB" Name="Listen to Diagnostic Sources" Kind="InputPin" IsHidden="true" />
           </Node>
           <Overlay Id="KC4IxkIwmIBMvox3qEr4Xw" Name="1. Create your metric server" Bounds="177,213,361,104" />
-          <Overlay Id="OBOtjF7ZL8MQbr3VAtQK5g" Name="2. Create metrics" Bounds="177,361,361,197" />
+          <Overlay Id="OBOtjF7ZL8MQbr3VAtQK5g" Name="2. Create a metric" Bounds="177,361,580,297" />
           <Pad Id="OTcSimpFOMANoD6fTTNsSj" Bounds="171,120,372,58" ShowValueBox="true" isIOBox="true" Value="How to instrument your patches with Prometheus metrics">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
@@ -40,8 +41,8 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Overlay Id="OnmnXM0O4ooMtOM9GRMP9Y" Name="3. See metrics in your browser" Bounds="177,601,361,97" />
-          <Pad Id="MG8pdEt1ruXO5vZkX7148J" Bounds="206,656,206,19" ShowValueBox="true" isIOBox="true" Value="http://localhost:15000/metrics">
+          <Overlay Id="OnmnXM0O4ooMtOM9GRMP9Y" Name="3. See metrics in your browser" Bounds="177,691,361,97" />
+          <Pad Id="MG8pdEt1ruXO5vZkX7148J" Bounds="206,746,206,19" ShowValueBox="true" isIOBox="true" Value="http://localhost:15000/metrics">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -50,11 +51,12 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="213,520,45,19" Id="SqhUxIawMbpQd9i3FFoOTO">
+          <Node Bounds="213,620,45,19" Id="SqhUxIawMbpQd9i3FFoOTO">
             <p:NodeReference LastCategoryFullName="Prometheus.Metrics" LastDependency="VL.Prometheus.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Gauge" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">Low</p:HelpFocus>
             <Pin Id="VoIZTXXHRi1MT25LZVQUCQ" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="UnvcHDoELJuLbq9M3fSVn6" Name="Name" Kind="InputPin" />
             <Pin Id="TqCrToWbC3hQa8jszSGidD" Name="Help" Kind="InputPin" />
@@ -66,23 +68,77 @@
             <Pin Id="QRAPkLqgUNWQateqWdS16P" Name="Label Values" Kind="InputPin" IsHidden="true" />
             <Pin Id="TMRWYRpmDUpLXqWAP0zRKU" Name="Value" Kind="InputPin" />
           </Node>
-          <Pad Id="IVeHaogr6G8OSz5Nl2LBXl" Comment="Name" Bounds="215,431,150,15" ShowValueBox="true" isIOBox="true" Value="application_framerate_fps">
+          <Pad Id="IVeHaogr6G8OSz5Nl2LBXl" Comment="Name" Bounds="215,405,150,15" ShowValueBox="true" isIOBox="true" Value="application_framerate">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="EaSDCskSIc2LYm7V0RZM5e" Comment="Help" Bounds="235,451,129,15" ShowValueBox="true" isIOBox="true" Value="The app's framerate">
+          <Pad Id="EaSDCskSIc2LYm7V0RZM5e" Comment="Help" Bounds="235,435,129,15" ShowValueBox="true" isIOBox="true" Value="The app's framerate">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="253,480,32,19" Id="Ij12pJf6WfpPPJCEXeeyN4">
+          <Node Bounds="253,535,32,19" Id="Ij12pJf6WfpPPJCEXeeyN4">
             <p:NodeReference LastCategoryFullName="Animation" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="FPS" />
             </p:NodeReference>
             <Pin Id="QrEKnT3PJoZOoQpH1V8tOQ" Name="Output" Kind="OutputPin" />
             <Pin Id="IOZJ6vnDyY8M2Oj8GEmn2a" Name="Clock" Kind="InputPin" IsHidden="true" />
+          </Node>
+          <Node Bounds="492,620,65,19" Id="NdhCtkQUNlENXpFF044oQd">
+            <p:NodeReference LastCategoryFullName="Prometheus.Metrics" LastDependency="VL.Prometheus.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Metrics" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Histogram" />
+            </p:NodeReference>
+            <Pin Id="AiQo4bYtnk8LhnBayABdny" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CSUF24rCD4PNrPap276wsA" Name="Name" Kind="InputPin" />
+            <Pin Id="T6iNfVbeVbMOucwRxSrzKL" Name="Help" Kind="InputPin" />
+            <Pin Id="QbkBJDtYxEbNZFL4a8umMi" Name="Label Names" Kind="InputPin" IsHidden="true" />
+            <Pin Id="AIN6dKsCsH4QLemLgVMb5q" Name="Buckets" Kind="InputPin" />
+            <Pin Id="DFtrqW4D9G0NLNv7uKcz99" Name="Value" Kind="InputPin" />
+            <Pin Id="CmlGe6aAJqVMXL9fUipbyE" Name="Label Values" Kind="InputPin" IsHidden="true" />
+            <Pin Id="OQv9lGEAPspLDsJBtJVPDu" Name="Output" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="CTZO4mpctwKM2tAPeGNNUE" Name="Sum" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="HD3kbEEURuALNvNj1Xwvur" Name="Count" Kind="OutputPin" IsHidden="true" />
+          </Node>
+          <Pad Id="B134a7SzGrhLeYHxR9GDpc" Comment="Buckets" Bounds="534,485,33,80" ShowValueBox="true" isIOBox="true" Value="8, 12, 16.7, 33">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Float32" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="JkWPV8KXf0ELJgYCsdStOA" Comment="Name" Bounds="494,405,238,15" ShowValueBox="true" isIOBox="true" Value="application_frame_duration_milliseconds">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="GwNpRen86TzPhEIynp4bse" Comment="Help" Bounds="514,435,180,32" ShowValueBox="true" isIOBox="true" Value="A histogram of the application's frame duration, in milliseconds">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="591,540,32,19" Id="MMj3ZW8FpIfMRimGFln3N9">
+            <p:NodeReference LastCategoryFullName="Animation" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="FPS" />
+            </p:NodeReference>
+            <Pin Id="T6goX9G7eNJOypJqBDWblt" Name="Output" Kind="OutputPin" />
+            <Pin Id="DQcp6KvVG6hM2I0BU3ibcb" Name="Clock" Kind="InputPin" IsHidden="true" />
+          </Node>
+          <Node Bounds="571,580,25,19" Id="EP8PcvDn747NGjCmTH36TO">
+            <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="/" />
+            </p:NodeReference>
+            <Pin Id="Iv6VtGbv3l3OBN8lqi8kBU" Name="Input" Kind="InputPin" DefaultValue="1000" />
+            <Pin Id="Mzs22qfvAW3LthL1XoBc1J" Name="Input 2" Kind="InputPin" />
+            <Pin Id="TtFFC8qv5byLhKNU06VByg" Name="Output" Kind="OutputPin" />
           </Node>
         </Canvas>
         <Patch Id="PnNDNDQIRtANQIH4pzkekC" Name="Create" />
@@ -94,6 +150,11 @@
         <Link Id="P23HNGX5IvaQFKftKIq7yr" Ids="EaSDCskSIc2LYm7V0RZM5e,TqCrToWbC3hQa8jszSGidD" />
         <Link Id="OHGj26XTzgpMNXIVOCHHvQ" Ids="IVeHaogr6G8OSz5Nl2LBXl,UnvcHDoELJuLbq9M3fSVn6" />
         <Link Id="ANsHkA5WsZnPSKEWmVjWB8" Ids="QrEKnT3PJoZOoQpH1V8tOQ,TMRWYRpmDUpLXqWAP0zRKU" />
+        <Link Id="QphqAtySDNnL1PUOBy7uhn" Ids="B134a7SzGrhLeYHxR9GDpc,AIN6dKsCsH4QLemLgVMb5q" />
+        <Link Id="UmiF80Of3rTPPOWKv62RsJ" Ids="JkWPV8KXf0ELJgYCsdStOA,CSUF24rCD4PNrPap276wsA" />
+        <Link Id="MS539oaXqg6Ovj99DG3dZE" Ids="GwNpRen86TzPhEIynp4bse,T6iNfVbeVbMOucwRxSrzKL" />
+        <Link Id="K2jzZDNejGOPY8YZRxIrpg" Ids="T6goX9G7eNJOypJqBDWblt,Mzs22qfvAW3LthL1XoBc1J" />
+        <Link Id="ETOnfRb2ODuLfi9yOQkfeK" Ids="TtFFC8qv5byLhKNU06VByg,DFtrqW4D9G0NLNv7uKcz99" />
       </Patch>
     </Node>
   </Patch>
