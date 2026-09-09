@@ -39,6 +39,7 @@ class Build : FalloutBuild
 
     Target Pack => _ => _
         .DependsOn(Clean)
+        .Requires(() => GitTasks.GitHasCleanWorkingCopy())
         .Executes(() =>
         {
             NuGetTasks.NuGetPack(f => f
@@ -49,6 +50,7 @@ class Build : FalloutBuild
 
     Target Push => _ => _
         .DependsOn(Pack)
+        .Requires(() => ApiKey)
         .Executes(() =>
         {
             NuGetTasks.NuGetPush(p => p
@@ -64,7 +66,6 @@ class Build : FalloutBuild
 
     Target Release => _ => _
     .DependsOn(Tag, Push)
-    .Requires(() => GitTasks.GitHasCleanWorkingCopy())
     .Executes(() =>
     {
         // Meta target, only calls Tag and Push, which themselves
