@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>VL.Prometheus</id>
+        <version>0.0.0</version>
+        <icon>img\logo.png</icon>
+        <description>A set of nodes to instrument your patches with Prometheus metrics. Based on the prometheus-net library.</description>
+        <authors>sebescudie</authors>
+        <readme>docs\README.md</readme>
+        <dependencies>
+            <dependency id="prometheus-net" version="8.2.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\**\*.vl" target="" />
+        <file src="..\img\logo.png" target="img\" />
+        <file src="..\README.md" target="docs\" />
+    </files>
+</package>
