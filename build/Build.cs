@@ -54,11 +54,13 @@ class Build : FalloutBuild
         .Executes(() =>
         {
             NuGetTasks.NuGetPush(p => p
+                .SetTargetPath(OutputDirectory.GlobFiles("*.nupkg").Single())
                 .SetSource(Source)
                 .SetApiKey(ApiKey));
         });
 
     Target Tag => _ => _
+        .Requires(() => GitTasks.GitHasCleanWorkingCopy())
         .Executes(() =>
         {
             GitTasks.Git($"tag -a {Version} -m \"VL Prometheus {Version}\"");
