@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="Ggs3tq0VKc5LYCgULtKZr3" LanguageVersion="2025.7.1-0178-g883a4e690a" Version="0.128">
-  <NugetDependency Id="BaAWGUbYFd8N87zZkF31LC" Location="VL.CoreLib" Version="2025.7.1-0178-g883a4e690a" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="Ggs3tq0VKc5LYCgULtKZr3" LanguageVersion="2026.8.0-0123-gdc6ede5082" Version="0.128">
+  <NugetDependency Id="BaAWGUbYFd8N87zZkF31LC" Location="VL.CoreLib" />
   <Patch Id="SzZJtWX2y41Nmi2ySVgvai">
     <Canvas Id="NbEMJCWURyiMAk4FWh9O9G" DefaultCategory="Prometheus.Proxies" CanvasType="FullCategory">
       <!--

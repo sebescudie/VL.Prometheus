@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="NUvJ8rEdtEiNqyk3lk4bFc" LanguageVersion="2026.8.0-0123-gdc6ede5082" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="NUvJ8rEdtEiNqyk3lk4bFc" LanguageVersion="2026.8.0-0127-gb8e9e6a34a" Version="0.128">
   <NugetDependency Id="A25PjmNS0PdPJcqPrAC6ON" Location="VL.CoreLib" />
   <Patch Id="QaNZqDVfM2RMFpBI9xMkL1">
     <Canvas Id="LNd7LClNAikMSbXDikYehF" DefaultCategory="Main" CanvasType="FullCategory" />
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="GfRX3lcXEOqM0DgRXAZiXl">
         <Canvas Id="HkFmCEpTLdgNK1XCFyM3m7" CanvasType="Group">
-          <Node Bounds="211,271,72,19" Id="SQMgnBDuyVNNYPWqObpetW">
+          <Node Bounds="134,282,72,19" Id="SQMgnBDuyVNNYPWqObpetW">
             <p:NodeReference LastCategoryFullName="Prometheus.Server" LastDependency="VL.Prometheus.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="MetricServer" />
@@ -30,9 +30,9 @@
             <Pin Id="VFsbpdY4FR9OflFHusHiTW" Name="Listen to Event Counters" Kind="InputPin" IsHidden="true" />
             <Pin Id="MNKOnCxT0e2O3MsurDeEHB" Name="Listen to Diagnostic Sources" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Overlay Id="KC4IxkIwmIBMvox3qEr4Xw" Name="1. Create your metric server" Bounds="177,213,361,104" />
-          <Overlay Id="OBOtjF7ZL8MQbr3VAtQK5g" Name="2. Create a metric" Bounds="177,361,580,297" />
-          <Pad Id="OTcSimpFOMANoD6fTTNsSj" Bounds="171,120,372,58" ShowValueBox="true" isIOBox="true" Value="How to instrument your patches with Prometheus metrics">
+          <Overlay Id="KC4IxkIwmIBMvox3qEr4Xw" Name="1. Create your metric server" Bounds="100,224,361,104" />
+          <Overlay Id="OBOtjF7ZL8MQbr3VAtQK5g" Name="2. Create a metric" Bounds="100,362,901,367" />
+          <Pad Id="OTcSimpFOMANoD6fTTNsSj" Bounds="94,131,372,58" ShowValueBox="true" isIOBox="true" Value="How to instrument your patches with Prometheus metrics">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -41,8 +41,8 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Overlay Id="OnmnXM0O4ooMtOM9GRMP9Y" Name="3. See metrics in your browser" Bounds="177,691,361,97" />
-          <Pad Id="MG8pdEt1ruXO5vZkX7148J" Bounds="206,746,206,19" ShowValueBox="true" isIOBox="true" Value="http://localhost:15000/metrics">
+          <Overlay Id="OnmnXM0O4ooMtOM9GRMP9Y" Name="3. See metrics in your browser" Bounds="100,777,361,97" />
+          <Pad Id="MG8pdEt1ruXO5vZkX7148J" Bounds="129,832,206,19" ShowValueBox="true" isIOBox="true" Value="http://localhost:15000/metrics">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -51,7 +51,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="213,620,45,19" Id="SqhUxIawMbpQd9i3FFoOTO">
+          <Node Bounds="136,631,45,19" Id="SqhUxIawMbpQd9i3FFoOTO">
             <p:NodeReference LastCategoryFullName="Prometheus.Metrics" LastDependency="VL.Prometheus.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Gauge" />
@@ -68,17 +68,17 @@
             <Pin Id="QRAPkLqgUNWQateqWdS16P" Name="Label Values" Kind="InputPin" IsHidden="true" />
             <Pin Id="TMRWYRpmDUpLXqWAP0zRKU" Name="Value" Kind="InputPin" />
           </Node>
-          <Pad Id="IVeHaogr6G8OSz5Nl2LBXl" Comment="Name" Bounds="215,405,150,15" ShowValueBox="true" isIOBox="true" Value="application_framerate">
+          <Pad Id="IVeHaogr6G8OSz5Nl2LBXl" Comment="Name" Bounds="138,416,150,15" ShowValueBox="true" isIOBox="true" Value="application_framerate">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="EaSDCskSIc2LYm7V0RZM5e" Comment="Help" Bounds="235,435,129,15" ShowValueBox="true" isIOBox="true" Value="The app's framerate">
+          <Pad Id="EaSDCskSIc2LYm7V0RZM5e" Comment="Help" Bounds="158,446,129,15" ShowValueBox="true" isIOBox="true" Value="The app's framerate">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="253,535,32,19" Id="Ij12pJf6WfpPPJCEXeeyN4">
+          <Node Bounds="176,546,32,19" Id="Ij12pJf6WfpPPJCEXeeyN4">
             <p:NodeReference LastCategoryFullName="Animation" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="FPS" />
@@ -86,7 +86,7 @@
             <Pin Id="QrEKnT3PJoZOoQpH1V8tOQ" Name="Output" Kind="OutputPin" />
             <Pin Id="IOZJ6vnDyY8M2Oj8GEmn2a" Name="Clock" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="492,620,65,19" Id="NdhCtkQUNlENXpFF044oQd">
+          <Node Bounds="370,631,65,19" Id="NdhCtkQUNlENXpFF044oQd">
             <p:NodeReference LastCategoryFullName="Prometheus.Metrics" LastDependency="VL.Prometheus.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Metrics" NeedsToBeDirectParent="true" />
@@ -103,7 +103,7 @@
             <Pin Id="CTZO4mpctwKM2tAPeGNNUE" Name="Sum" Kind="OutputPin" IsHidden="true" />
             <Pin Id="HD3kbEEURuALNvNj1Xwvur" Name="Count" Kind="OutputPin" IsHidden="true" />
           </Node>
-          <Pad Id="B134a7SzGrhLeYHxR9GDpc" Comment="Buckets" Bounds="534,485,33,80" ShowValueBox="true" isIOBox="true" Value="8, 12, 16.7, 33">
+          <Pad Id="B134a7SzGrhLeYHxR9GDpc" Comment="Buckets" Bounds="412,496,34,80" ShowValueBox="true" isIOBox="true" Value="8, 12, 16.7, 33">
             <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Spread" />
               <p:TypeArguments>
@@ -113,17 +113,17 @@
               </p:TypeArguments>
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="JkWPV8KXf0ELJgYCsdStOA" Comment="Name" Bounds="494,405,238,15" ShowValueBox="true" isIOBox="true" Value="application_frame_duration_milliseconds">
+          <Pad Id="JkWPV8KXf0ELJgYCsdStOA" Comment="Name" Bounds="372,416,238,15" ShowValueBox="true" isIOBox="true" Value="application_frame_duration_milliseconds">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="GwNpRen86TzPhEIynp4bse" Comment="Help" Bounds="514,435,180,32" ShowValueBox="true" isIOBox="true" Value="A histogram of the application's frame duration, in milliseconds">
+          <Pad Id="GwNpRen86TzPhEIynp4bse" Comment="Help" Bounds="392,446,180,32" ShowValueBox="true" isIOBox="true" Value="A histogram of the application's frame duration, in milliseconds">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="591,540,32,19" Id="MMj3ZW8FpIfMRimGFln3N9">
+          <Node Bounds="469,551,32,19" Id="MMj3ZW8FpIfMRimGFln3N9">
             <p:NodeReference LastCategoryFullName="Animation" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="FPS" />
@@ -131,7 +131,7 @@
             <Pin Id="T6goX9G7eNJOypJqBDWblt" Name="Output" Kind="OutputPin" />
             <Pin Id="DQcp6KvVG6hM2I0BU3ibcb" Name="Clock" Kind="InputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="571,580,25,19" Id="EP8PcvDn747NGjCmTH36TO">
+          <Node Bounds="449,591,25,19" Id="EP8PcvDn747NGjCmTH36TO">
             <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="/" />
@@ -140,6 +140,81 @@
             <Pin Id="Mzs22qfvAW3LthL1XoBc1J" Name="Input 2" Kind="InputPin" />
             <Pin Id="TtFFC8qv5byLhKNU06VByg" Name="Output" Kind="OutputPin" />
           </Node>
+          <Node Bounds="697,631,105,19" Id="MAOdPI3QyupMyIjRzhVRTi">
+            <p:NodeReference LastCategoryFullName="Prometheus.Metrics" LastDependency="VL.Prometheus.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Metrics" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Counter" />
+            </p:NodeReference>
+            <Pin Id="KweftVJgxHkNjwpjSyReks" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HQy9Jk7exzsQBliECrKK01" Name="Name" Kind="InputPin" />
+            <Pin Id="Jda5u6CDK3FM2g9fWBYLGP" Name="Help" Kind="InputPin" />
+            <Pin Id="CkbxlUSnMH4OI5O0Ykw6fY" Name="Label Names" Kind="InputPin" IsHidden="true" />
+            <Pin Id="TUA1sbJBKetM3vRi84ZFkT" Name="Label Values" Kind="InputPin" IsHidden="true" />
+            <Pin Id="LcIttMeev7LPQQl2BpUdk9" Name="Increment" Kind="InputPin" />
+            <Pin Id="Snk0wyd7DCHQbkt0tT6cVx" Name="Up" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="Lf2W3i3UA1gNTlEXvWFW0S" Name="Target Value" Kind="InputPin" />
+            <Pin Id="AUd9z5nsSkeLd9ztaYk5sK" Name="Output" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="LWUxISgHb5BMBOt8wcg8dU" Name="Increment To Target Value" Kind="InputPin" />
+          </Node>
+          <Pad Id="KJ7Hphnw7slNevoAT82FkL" Comment="Name" Bounds="699,416,154,15" ShowValueBox="true" isIOBox="true" Value="application_frame_count">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="RJWFB03kxMJQVNfW7j6rWW" Comment="Help" Bounds="719,441,140,31" ShowValueBox="true" isIOBox="true" Value="Number of frames since the activation started">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="EccXGU8ZgWDPgUhHX0ADWj" Comment="Increment" Bounds="739,506,35,15" ShowValueBox="true" isIOBox="true" Value="1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="NqEUXJ2vVBxPwJLhfS6BV1" Comment="Up" Bounds="759,527,35,15" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Dj626siHkPuMSDihJeWwGa" Comment="Increment To Target Value" Bounds="799,571,35,15" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="HxIdmVNUtUtMOOtD29F5Pv" Bounds="129,671,141,42" ShowValueBox="true" isIOBox="true" Value="A value that can go up and down">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="OOFbbcOYsLRM4uLvkV6UmQ" Bounds="688,671,133,38" ShowValueBox="true" isIOBox="true" Value="A value that always goes up">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Johks33n9xfQLFVqE4F4JH" Bounds="362,671,175,42" ShowValueBox="true" isIOBox="true" Value="Counts how many times a value falls in a bucket">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="PnNDNDQIRtANQIH4pzkekC" Name="Create" />
         <Patch Id="JxWZW8sia8pNnRKuUe4dT4" Name="Update" />
@@ -155,6 +230,11 @@
         <Link Id="MS539oaXqg6Ovj99DG3dZE" Ids="GwNpRen86TzPhEIynp4bse,T6iNfVbeVbMOucwRxSrzKL" />
         <Link Id="K2jzZDNejGOPY8YZRxIrpg" Ids="T6goX9G7eNJOypJqBDWblt,Mzs22qfvAW3LthL1XoBc1J" />
         <Link Id="ETOnfRb2ODuLfi9yOQkfeK" Ids="TtFFC8qv5byLhKNU06VByg,DFtrqW4D9G0NLNv7uKcz99" />
+        <Link Id="IWsob4h2mKgNoMQDMTYAsM" Ids="KJ7Hphnw7slNevoAT82FkL,HQy9Jk7exzsQBliECrKK01" />
+        <Link Id="EJtScdDwOUsOfJsijMleLa" Ids="RJWFB03kxMJQVNfW7j6rWW,Jda5u6CDK3FM2g9fWBYLGP" />
+        <Link Id="FhlXSApT43cLZHDiwI47Jt" Ids="EccXGU8ZgWDPgUhHX0ADWj,LcIttMeev7LPQQl2BpUdk9" />
+        <Link Id="OsWwbRF6DVLOYfOpnburpp" Ids="NqEUXJ2vVBxPwJLhfS6BV1,Snk0wyd7DCHQbkt0tT6cVx" />
+        <Link Id="VcCNj9OYX2dLEQUNLxElLy" Ids="Dj626siHkPuMSDihJeWwGa,LWUxISgHb5BMBOt8wcg8dU" />
       </Patch>
     </Node>
   </Patch>
