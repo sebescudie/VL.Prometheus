@@ -4,6 +4,8 @@
         <id>VL.Prometheus</id>
         <version>0.0.0</version>
         <icon>img\logo.png</icon>
+        <repository type="git" url="https://github.com/sebescudie/VL.Prometheus.git"/>
+        <projectUrl>https://github.com/sebescudie/VL.Prometheus</projectUrl>
         <description>A set of nodes to instrument your patches with Prometheus metrics. Based on the prometheus-net library.</description>
         <authors>sebescudie</authors>
         <readme>docs\README.md</readme>
